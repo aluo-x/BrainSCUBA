@@ -1,31 +1,10 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# # Inference notenook for [CLIP prefix captioning](https://github.com/rmokady/CLIP_prefix_caption/)
-# 
-# Disclaimer: the authors do not own any rights for the code or data.
-
-# In[1]:
 import argparse
-
-# Instantiate the parser
 
 import math
 
 
 import transformers
-# print(transformers.__version__)
 
-
-# In[31]:
-
-
-
-
-# In[2]:
-
-
-#@title Imports
 
 import clip
 import os
@@ -264,59 +243,17 @@ def generate2(
     return generated_list[0]
 
 
-# In[5]:
-
-
-#@title Choose pretrained model - COCO or Coneptual captions
 
 
 pretrained_model = 'COCO'  # @param ['COCO', 'Conceptual captions']
 
 
-# In[6]:
-
-
-#@title GPU/CPU
-
-
 is_gpu = True #@param {type:"boolean"}  
-
-
-# In[7]:
-
-
-#@title CLIP model + GPT2 tokenizer
 
 device = CUDA(0) if is_gpu else "cpu"
 clip_model, preprocess = clip.load("ViT-B/32", device=device, jit=False)
 tokenizer = GPT2Tokenizer.from_pretrained("gpt2")
 
-
-# In[8]:
-
-
-#prefix_length = 10
-
-#model = ClipCaptionModel(prefix_length)
-
-
-
-# In[9]:
-
-
-
-
-
-# In[9]:
-
-
-
-
-
-# In[10]:
-
-
-#@title Load model weights
 prefix_length = 10
 
 model = ClipCaptionModel(prefix_length)
@@ -328,23 +265,6 @@ model = model.eval()
 device = CUDA(0) if is_gpu else "cpu"
 model = model.to(device)
 
-
-# In[ ]:
-
-
-
-
-
-# In[10]:
-
-
-
-
-
-# Conceptual captions examples:
-# https://drive.google.com/file/d/1mzH3b0LQrGEWjEva4hI6HE_fIYRIgtBT/view?usp=sharing
-
-# In[19]:
 
 
 #@title Inference
