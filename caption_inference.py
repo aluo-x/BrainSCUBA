@@ -274,7 +274,6 @@ import pickle
 bs_off = []
 for subject in [1,2,5,7]:
 #for subject in [8]:
-    print("15000000000000000000000000000000")
     try:
         del cur_weight
     except:
