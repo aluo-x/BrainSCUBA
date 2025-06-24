@@ -1,4 +1,4 @@
-# BrainSCUBA: Fine-Grained Natural Language Captions of Visual Cortex Selectivity
+# BrainSCUBA: Fine-Grained Natural Language Captions of Visual Cortex Selectivity (ICLR 2024)
 ### Andrew F. Luo, Margaret M. Henderson, Michael J. Tarr, Leila Wehbe
 #### ICLR 2024
 This is the official code release for ***BrainSCUBA: Fine-Grained Natural Language Captions of Visual Cortex Selectivity*** (ICLR 2024).
